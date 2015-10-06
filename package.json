@@ -1,0 +1,28 @@
+{
+  "name": "ng-cable",
+  "version": "0.1.0",
+  "description": "Power your Angular application with ActionCable",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/wazery/ng-cable"
+  },
+  "keywords": [
+    "cable",
+    "ActionCable",
+    "Angular-cable",
+    "ng-cable",
+    "Rails",
+    "rails",
+    "Cable"
+  ],
+  "author": "Islam Wazery <wazery@ubuntu.com> (http://www.wazery.com)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/wazery/ng-cable/issues"
+  },
+  "homepage": "https://github.com/wazery/ng-cable"
+}
