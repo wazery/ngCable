@@ -5,7 +5,7 @@ angular.module('ng-cable', [])
 .service('$cable', function () {
 
     function AngularCable(url) {
-        this.cable = Cable.createConsumerurl(url);
+        this.cable = Cable.createConsumer(url);
         this.subscriptions = {};
     }
 
