@@ -43,9 +43,11 @@ app.controller('MainCtrl', function ($scope, $cable) {
 
 ## API
 
-ngCable service provides easy to use and minimalistic API, but in the same time it's powerful enough. Here is the list of accessible methods that you can use:
+ngCable factory provides easy to use and minimalistic API, but in the same time it's powerful enough. 
 
-### ``.subscribe(options)``
+Here is the list of accessible methods that you can use:
+
+### ``.subscribe(channel_name, {})``
 
 Method allows to subscribe to a channel.
 
