@@ -56,3 +56,11 @@ I have created example applications for both Rails, and Angular sides. You can c
 Here is a screenshot from the Angular example application:
 
 ![Angular app screenshot](http://i.imgur.com/m8WJWfL.png?1)
+
+## Collaboration
+
+Your help is appreciated! If you've found a bug or something is not clear, please raise an issue.
+
+Ideally, if you've found an issue, you will submit a PR that meets our [contributor guidelines](https://github.com/wazery/ngCable/blob/dev/contributing.markdown).
+
+[![Throughput Graph](https://graphs.waffle.io/wazery/ngCable/throughput.svg)](https://waffle.io/wazery/ngCable/metrics)
