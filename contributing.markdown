@@ -12,6 +12,22 @@ In addition, where a contribution is aimed at resolving a bug or implementing a 
 
 If your PR adds new behhaviour or modifies existing behaviour, the README should be updated.
 
+# Changelog
+
+Changelog must reflect the change you did introduce, undre the relevant version.
+
+# Git History
+
+Please follow the convention of Git commit messages, which you can read more about from [here](tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html).
+
+In a nutshell use imparative style like:
+
+1. Add spec file for the channels module
+2. Update changelog
+3. Bump up the Bower component version
+
+These messages should not exceed 50 chars. It would be great if you added some more info in the line bellow the commit messages. That will help you when you open a PR, in which the description you entered will be added to the PR.
+
 # Coding style
 
 > All code in any code-base should look like a single person typed it, no matter how many people contributed.
