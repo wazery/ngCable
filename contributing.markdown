@@ -10,11 +10,11 @@ In addition, where a contribution is aimed at resolving a bug or implementing a 
 
 # README
 
-If your PR adds new behhaviour or modifies existing behaviour, the README should be updated.
+If your PR adds new behaviour or modifies existing behaviour, the README should be updated.
 
 # Changelog
 
-Changelog must reflect the change you did introduce, undre the relevant version.
+Changelog must reflect the change you did introduce, under the relevant version.
 
 # Git History
 
@@ -24,7 +24,7 @@ In a nutshell use imparative style like:
 
 1. Add spec file for the channels module
 2. Update changelog
-3. Bump up the Bower component version
+3. Bump up Bower component version
 
 These messages should not exceed 50 chars. It would be great if you added some more info in the line bellow the commit messages. That will help you when you open a PR, in which the description you entered will be added to the PR.
 
