@@ -4,7 +4,9 @@
 [![Download Count](https://img.shields.io/npm/dm/ng-cable.svg?style=flat-square)](http://www.npmjs.com/package/ng-cable)
 [![Code Climate](https://img.shields.io/codeclimate/github/wazery/ngCable/badges/gpa.svg?style=flat-square)](https://codeclimate.com/github/wazery/ngCable)
 
-![ng-cable logo](http://i.imgur.com/hicMwNW.png?1)
+<p align="center">
+  <img src='http://i.imgur.com/hicMwNW.png' alt='ng-cable logoe'/>
+</p>
 
 > Easily integrate Rails' ActionCable into your Angular application.
 
