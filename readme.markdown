@@ -1,8 +1,8 @@
-[![Build Status](https://travis-ci.org/wazery/ng-cable.svg)](https://travis-ci.org/wazery/ng-cable)
-[![npm version](http://badge.fury.io/js/ng-cable.svg)](http://badge.fury.io/js/ng-cable)
-[![github tag](https://img.shields.io/github/tag/wazery/ngCable.svg)](https://github.com/wazery/ngCable/tags)
-[![Download Count](https://img.shields.io/npm/dm/ng-cable.svg)](http://www.npmjs.com/package/ng-cable)
-[![Code Climate](https://codeclimate.com/github/wazery/ngCable/badges/gpa.svg)](https://codeclimate.com/github/wazery/ngCable)
+[![Build Status](https://img.shields.io/travis/wazery/ng-cable.svg?style=flat-square)](https://travis-ci.org/wazery/ng-cable)
+[![npm version](https://img.shields.io/npm/v/ng-cable.svg?style=flat-square)](http://badge.fury.io/js/ng-cable)
+[![github tag](https://img.shields.io/github/tag/wazery/ngCable.svg?style=flat-square)](https://github.com/wazery/ngCable/tags)
+[![Download Count](https://img.shields.io/npm/dm/ng-cable.svg?style=flat-square)](http://www.npmjs.com/package/ng-cable)
+[![Code Climate](https://img.shields.io/codeclimate/github/wazery/ngCable/badges/gpa.svg?style=flat-square)](https://codeclimate.com/github/wazery/ngCable)
 
 ![ng-cable logo](http://i.imgur.com/hicMwNW.png?1)
 
