@@ -3,7 +3,7 @@
   "description": "Power your Angular application with Rails' ActionCable",
   "version": "0.0.1",
   "main":[
-  	"src/action-cable.js",
+  	"src/action-cable.min.js",
   	"src/ngCable.js"
   ],
   "dependencies": {
@@ -18,7 +18,8 @@
     "node_modules",
     "bower_components",
     "test",
-    "tests"
+    "tests",
+    "example"
   ],
   "devDependencies": {
     "angular": "latest"

@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('ng-cable', [])
+angular.module('ngCable', [])
 
 .factory('$cable', function ($channel) {
 

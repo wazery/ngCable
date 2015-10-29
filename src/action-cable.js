@@ -1,6 +1,6 @@
 (function() {
   this.Cable = {
-    PING_IDENTIFIER: "_ping",
+    PING_IDENTIFIER: '_ping',
     createConsumer: function(url) {
       return new Cable.Consumer(url);
     }
@@ -27,7 +27,7 @@
     };
 
     Connection.prototype.open = function() {
-      if (this.isState("open", "connecting")) {
+      if (this.isState('open', 'connecting')) {
         return;
       }
       this.webSocket = new WebSocket(this.consumer.url);
@@ -36,7 +36,7 @@
 
     Connection.prototype.close = function() {
       var ref;
-      if (this.isState("closed", "closing")) {
+      if (this.isState('closed', 'closing')) {
         return;
       }
       return (ref = this.webSocket) != null ? ref.close() : void 0;
@@ -55,7 +55,7 @@
     };
 
     Connection.prototype.isOpen = function() {
-      return this.isState("open");
+      return this.isState('open');
     };
 
     Connection.prototype.isState = function() {
@@ -80,8 +80,8 @@
         callback = function() {};
       }
       this.uninstallEventHandlers();
-      this.installEventHandler("close", callback);
-      this.installEventHandler("error", callback);
+      this.installEventHandler('close', callback);
+      this.installEventHandler('error', callback);
       try {
         return this.webSocket.close();
       } finally {
@@ -118,16 +118,16 @@
       message: function(event) {
         var identifier, message, ref;
         ref = JSON.parse(event.data), identifier = ref.identifier, message = ref.message;
-        return this.consumer.subscriptions.notify(identifier, "received", message);
+        return this.consumer.subscriptions.notify(identifier, 'received', message);
       },
       open: function() {
         return this.consumer.subscriptions.reload();
       },
       close: function() {
-        return this.consumer.subscriptions.notifyAll("disconnected");
+        return this.consumer.subscriptions.notifyAll('disconnected');
       },
       error: function() {
-        this.consumer.subscriptions.notifyAll("disconnected");
+        this.consumer.subscriptions.notifyAll('disconnected');
         return this.closeSilently();
       }
     };
@@ -265,7 +265,7 @@
     Subscriptions.prototype.create = function(channelName, mixin) {
       var channel, params;
       channel = channelName;
-      params = typeof channel === "object" ? channel : {
+      params = typeof channel === 'object' ? channel : {
         channel: channel
       };
       return new Cable.Subscription(this, params, mixin);
@@ -273,9 +273,9 @@
 
     Subscriptions.prototype.add = function(subscription) {
       this.subscriptions.push(subscription);
-      this.notify(subscription, "initialized");
-      if (this.sendCommand(subscription, "subscribe")) {
-        return this.notify(subscription, "connected");
+      this.notify(subscription, 'initialized');
+      if (this.sendCommand(subscription, 'subscribe')) {
+        return this.notify(subscription, 'connected');
       }
     };
 
@@ -285,8 +285,8 @@
       results = [];
       for (i = 0, len = ref.length; i < len; i++) {
         subscription = ref[i];
-        if (this.sendCommand(subscription, "subscribe")) {
-          results.push(this.notify(subscription, "connected"));
+        if (this.sendCommand(subscription, 'subscribe')) {
+          results.push(this.notify(subscription, 'connected'));
         } else {
           results.push(void 0);
         }
@@ -309,7 +309,7 @@
         return results;
       }).call(this);
       if (!this.findAll(subscription.identifier).length) {
-        return this.sendCommand(subscription, "unsubscribe");
+        return this.sendCommand(subscription, 'unsubscribe');
       }
     };
 
@@ -341,7 +341,7 @@
     Subscriptions.prototype.notify = function() {
       var args, callbackName, i, len, results, subscription, subscriptions;
       subscription = arguments[0], callbackName = arguments[1], args = 3 <= arguments.length ? slice.call(arguments, 2) : [];
-      if (typeof subscription === "string") {
+      if (typeof subscription === 'string') {
         subscriptions = this.findAll(subscription);
       } else {
         subscriptions = [subscription];
@@ -349,7 +349,7 @@
       results = [];
       for (i = 0, len = subscriptions.length; i < len; i++) {
         subscription = subscriptions[i];
-        results.push(typeof subscription[callbackName] === "function" ? subscription[callbackName].apply(subscription, args) : void 0);
+        results.push(typeof subscription[callbackName] === 'function' ? subscription[callbackName].apply(subscription, args) : void 0);
       }
       return results;
     };
@@ -408,7 +408,7 @@
 
     Subscription.prototype.send = function(data) {
       return this.consumer.send({
-        command: "message",
+        command: 'message',
         identifier: this.identifier,
         data: JSON.stringify(data)
       });

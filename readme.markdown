@@ -1,45 +1,57 @@
-[![Build Status](https://travis-ci.org/wazery/ng-cable.svg)](https://travis-ci.org/wazery/ng-cable)
+[![Build Status](https://img.shields.io/travis/wazery/ng-cable.svg?style=flat-square)](https://travis-ci.org/wazery/ng-cable)
+[![npm version](https://img.shields.io/npm/v/ng-cable.svg?style=flat-square)](http://badge.fury.io/js/ng-cable)
+[![github tag](https://img.shields.io/github/tag/wazery/ngCable.svg?style=flat-square)](https://github.com/wazery/ngCable/tags)
+[![Download Count](https://img.shields.io/npm/dm/ng-cable.svg?style=flat-square)](http://www.npmjs.com/package/ng-cable)
+[![Code Climate](https://img.shields.io/codeclimate/github/wazery/ngCable/badges/gpa.svg?style=flat-square)](https://codeclimate.com/github/wazery/ngCable)
 
-![ng-cable logo](http://i.imgur.com/hicMwNW.png?1)
+<p align="center">
+  <img src='http://i.imgur.com/hicMwNW.png' alt='ng-cable logoe'/>
+</p>
 
-# Angular Cable
-Action Cable JS customized for Angular
+> Easily integrate Rails' ActionCable into your Angular application.
+
+### [Demo](http://wazery.github.io/ngCable)
+
+## Install
+
+You can download all necessary ngCable files manually or install it with Bower:
+
+```bash
+bower install ngCable
+```
+
+or NPM:
+
+```bash
+npm install ng-cable
+```
 
 ## Usage
 
+You will not need to include any files, you can start using ``ngCable`` provider in your directives, controllers and services, just after installing the Bower component or NPM module.
+
+For example in controllers:
+
+```javascript
+var app = angular.module('exampleApp', ['ngCable']);
+
+app.controller('MainCtrl', function ($scope, $cable) {
+    var cable = $cable('ws://0.0.0.0:28080');
+    var channel = cable.subscribe('RoomsChannel', { received: function(newComment){
+      $scope.comments.push(newComment);
+    }});
+});
 ```
-Usage: ng-cable [entry files] {OPTIONS}
 
-Standard Options:
+## API
 
-    --require, -r  A module name or file to bundle.require()
-                   Optionally use a colon separator to set the target.
+ngCable factory provides easy to use and minimalistic API, but in the same time it's powerful enough. 
 
-      --entry, -e  An entry point of your app
+Here is the list of accessible methods that you can use:
 
-     --ignore, -i  Replace a file with an empty stub. Files can be globs.
+### ``.subscribe(channel_name, {})``
 
-    --exclude, -u  Omit a file from the output bundle. Files can be globs.
-
-   --external, -x  Reference a file from another bundle. Files can be globs.
-
-  --transform, -t  Use a transform module on top-level files.
-
-    --command, -c  Use a transform command on top-level files.
-
-  --standalone -s  Generate a UMD bundle for the supplied export name.
-                   This bundle works with other module systems and sets the name
-                   given as a window global if no module system is found.
-
-       --debug -d  Enable source maps that allow you to debug your files
-                   separately.
-
-       --help, -h  Show this message
-
-For advanced options, type `ng-cable --help advanced`.
-
-Specify a parameter.
-```
+Method allows to subscribe to a channel.
 
 ## Example Applications
 
@@ -49,4 +61,10 @@ Here is a screenshot from the Angular example application:
 
 ![Angular app screenshot](http://i.imgur.com/m8WJWfL.png?1)
 
+## Collaboration
 
+Your help is appreciated! If you've found a bug or something is not clear, please raise an issue.
+
+Ideally, if you've found an issue, you will submit a PR that meets our [contributor guidelines](https://github.com/wazery/ngCable/blob/dev/contributing.markdown).
+
+[![Throughput Graph](https://graphs.waffle.io/wazery/ngCable/throughput.svg)](https://waffle.io/wazery/ngCable/metrics)
