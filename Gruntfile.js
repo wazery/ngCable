@@ -15,9 +15,9 @@ module.exports = function (grunt) {
         },
         jshint: {
             options: {
-                ignores: ['./src/ngCable.min.js']
+                jshintrc: '.jshintrc'
             },
-            files: ['*.js']
+            files: ['./src/ngCable.js']
         }
     });
 
