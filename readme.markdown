@@ -45,13 +45,24 @@ app.controller('MainCtrl', function ($scope, $cable) {
 
 ## API
 
-ngCable factory provides easy to use and minimalistic API, but in the same time it's powerful enough. 
+ngCable factory provides easy to use and minimalistic API, but in the same time it's powerful enough.
 
 Here is the list of accessible methods that you can use:
 
-### ``.subscribe(channel_name, {})``
+### Subscriptions
+#### ``.subscribe(channel_name, {})``
+  Method allows to subscribe to a channel.
 
-Method allows to subscribe to a channel.
+#### ``.unsubscribe(channel_name, {})``
+  Method allows to unsubscribe from a channel.
+
+### Connection
+#### ``cable.connection.isOpen()``
+  To check if the connection is open, using the cable instance.
+
+### Channels
+### ``cable.channels``
+  To list all of the avialable channels.
 
 ## Example Applications
 
@@ -68,3 +79,4 @@ Your help is appreciated! If you've found a bug or something is not clear, pleas
 Ideally, if you've found an issue, you will submit a PR that meets our [contributor guidelines](https://github.com/wazery/ngCable/blob/dev/contributing.markdown).
 
 [![Throughput Graph](https://graphs.waffle.io/wazery/ngCable/throughput.svg)](https://waffle.io/wazery/ngCable/metrics)
+
