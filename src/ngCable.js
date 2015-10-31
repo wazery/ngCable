@@ -8,7 +8,7 @@ angular.module('ngCable', [])
                 return new AngularCable(url);
             }
             this.client = Cable.createConsumer(url);
-            this.connection = Cable.Connection(this.client);
+            this.connection = this.client.connection;
             this.channels = {};
         }
 
@@ -17,7 +17,7 @@ angular.module('ngCable', [])
              * Subscribes the client to the specified channelName and returns the channel object.
              *
              * @param {String} channelName name of the channel
-             * @param {Object || Function} callback object contains callbacks for actions or function for "received" action
+             * @param {Object || Function} callback object contains callbacks for actions or function for 'received' action
              * @returns {Object} channel object
              */
             subscribe: function (channelName, callback) {
@@ -64,7 +64,7 @@ angular.module('ngCable', [])
             /**
              * Sends a message to current channel and returns message status.
              *
-             * @param {Object} data  object contains sender name and message body
+             * @param {Object} data object contains sender name and message body
              *        for example {sent_by: 'Peter', body: 'Hello Paul, thanks for the compliment.'}
              * @returns {Boolean} failed or succeed
              */
@@ -73,7 +73,7 @@ angular.module('ngCable', [])
             },
 
             /**
-             * Unsubscribes  from the current channel
+             * Unsubscribes from the current channel
              *
              * @returns {Boolean} failed or succeed
              */
@@ -84,3 +84,4 @@ angular.module('ngCable', [])
 
         return $channel;
     });
+
