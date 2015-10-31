@@ -76,6 +76,7 @@ You can check them here by cloning this [repository](https://github.com/wazery/n
 2. Open different chat rooms
 3. Chat in real time with online users
 4. See whom are online
+5. Check the API WebSocket connection heartbeat (The `We're Live!` label in the header)
 
 Here is a screenshot from the Angular example application:
 
