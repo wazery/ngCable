@@ -68,6 +68,12 @@ Here is the list of accessible methods that you can use:
 
 I have created example applications for both Rails, and Angular sides. You can check them here by cloning this [repository](https://github.com/wazery/ng-cable-example-apps) and following the instructions of each submodule (application).
 
+In this example application you can:
+1. Login with multiple users
+2. Open different chat rooms
+3. Chat in real time with online users
+4. See whom are online
+
 Here is a screenshot from the Angular example application:
 
 ![Angular app screenshot](http://i.imgur.com/m8WJWfL.png?1)
