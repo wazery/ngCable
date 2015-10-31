@@ -62,13 +62,16 @@ Here is the list of accessible methods that you can use:
 
 ### Channels
 ### ``cable.channels``
-  To list all of the avialable channels.
+  To list all of the available channels.
 
 ## Example Applications
 
-I have created example applications for both Rails, and Angular sides. You can check them here by cloning this [repository](https://github.com/wazery/ng-cable-example-apps) and following the instructions of each submodule (application).
+I have created example applications for both Rails, and Angular sides.
 
-In this example application you can:
+You can check them here by cloning this [repository](https://github.com/wazery/ng-cable-example-apps) and following the instructions of each submodule (application).
+
+**In this example application you can:**
+
 1. Login with multiple users
 2. Open different chat rooms
 3. Chat in real time with online users
