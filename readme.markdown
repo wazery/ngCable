@@ -10,8 +10,8 @@
 
 > Easily integrate Rails' ActionCable into your Angular application.
 
-### [Demo](http://wazery.github.io/ngCable)
-### [API base URL](http://api-cable.herokuapp.com)
+### [Demo](https://cabe-app.herokuapp.com)
+### [API base URL](https://api-cable.herokuapp.com)
 
 ## Install
 
