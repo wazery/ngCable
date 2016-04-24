@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('ngCable', [])
-    .factory('$cable', function ($channel) {
+    .factory('$cable', ['$channel', function ($channel) {
 
         function AngularCable(url) {
             if (!(this instanceof AngularCable)) {
@@ -47,9 +47,9 @@ angular.module('ngCable', [])
             }
         };
         return AngularCable;
-    })
+    }])
 
-    .factory('$channel', function () {
+    .factory('$channel', [function () {
         function $channel(baseChannel, cable) {
             if (!(this instanceof $channel)) {
                 return new $channel(baseChannel, cable);
@@ -83,5 +83,5 @@ angular.module('ngCable', [])
         };
 
         return $channel;
-    });
+    }]);
 
